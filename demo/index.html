@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="js/captcha.js"></script>
+<script>
+window.addEventListener('load',function() {document.getElementById('form1').captcha()});
+</script>
+</head>
+<body>
+<h1>Captcha form demo</h1>
+<form action='php/default.php' method='POST' id="form1">
+Your name: <input type="text" name="name"/><br/>
+<captcha></captcha><br/>
+<input type="submit" value="Send"/>
+</form>
+</body>
+</html>
