@@ -3,7 +3,7 @@ class Captcha {
   public function check($value) {
     if(!isset($_COOKIE['captcha_hash'])) {
       return false;
-    } elseif (slef::hash($value) == $_COOKIE['captcha_hash']) {
+    } elseif (self::hash($value) == $_COOKIE['captcha_hash']) {
       return true;
     } else {
       return false;
