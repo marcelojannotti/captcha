@@ -4,6 +4,8 @@ class Captcha {
     if(!isset($_COOKIE['captcha_hash'])) {
       return false;
     } elseif (self::hash($value) == $_COOKIE['captcha_hash']) {
+      setcookie("captcha_hash", "", time() - 3600);
+      unset($_COOKIE['captcha_hash']);
       return true;
     } else {
       return false;
